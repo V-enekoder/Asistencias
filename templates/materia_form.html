@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{% if materia %}Editar{% else %}Nueva{% endif %} Materia{% endblock %}
+
+{% block content %}
+    <h2>{% if materia %}Editar{% else %}Añadir Nueva{% endif %} Materia</h2>
+    
+    <div class="card">
+        <form method="POST">
+            <div style="margin-bottom: 15px;">
+                <label for="nombre_materia">Nombre de la Materia:</label>
+                <input type="text" id="nombre_materia" name="nombre_materia" value="{{ materia.nombre_materia if materia else '' }}" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="codigo_materia">Código de Materia:</label>
+                <input type="text" id="codigo_materia" name="codigo_materia" value="{{ materia.codigo_materia if materia else '' }}" required style="width: 100%; padding: 8px;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="profesor_id">Profesor:</label>
+                <select id="profesor_id" name="profesor_id" required style="width: 100%; padding: 8px;">
+                    <option value="">-- Seleccione un profesor --</option>
+                    {% for profesor in profesores %}
+                        <option value="{{ profesor.id }}" {% if materia and materia.profesor_id == profesor.id %}selected{% endif %}>
+                            {{ profesor.nombre }} {{ profesor.apellido }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <button type="submit" class="btn">Guardar Cambios</button>
+            <a href="{{ url_for('lista_materias') }}" class="btn" style="background-color:#6c757d;">Cancelar</a>
+        </form>
+    </div>
+{% endblock %}

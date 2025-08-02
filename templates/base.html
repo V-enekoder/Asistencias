@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}Control de Asistencia{% endblock %}</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/style.css') }}"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>
+				<a
+					href="{{ url_for('index') }}"
+					style="color: white; text-decoration: none"
+				>
+					Sistema de Control de Asistencias
+				</a>
+			</h1>
+
+			<nav>
+				<a href="{{ url_for('index') }}" style="color: white; margin: 0 15px"
+					>Materias</a
+				>
+				<a
+					href="{{ url_for('lista_estudiantes') }}"
+					style="color: white; margin: 0 15px"
+					>Estudiantes</a
+				>
+				<a
+					href="{{ url_for('lista_profesores') }}"
+					style="color: white; margin: 0 15px"
+					>Profesores</a
+				>
+				<a
+					href="{{ url_for('lista_materias') }}"
+					style="color: white; margin: 0 15px"
+					>Gestionar Materias</a
+				>
+				<a
+					href="{{ url_for('gestion_inscripciones') }}"
+					style="color: white; margin: 0 10px"
+					>Inscripciones</a
+				>
+			</nav>
+		</header>
+
+		<div class="container">{% block content %}{% endblock %}</div>
+	</body>
+</html>

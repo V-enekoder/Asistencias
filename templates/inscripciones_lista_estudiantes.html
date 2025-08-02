@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %}Gestión de Inscripciones{% endblock
+%} {% block content %}
+<h2>Gestión de Inscripciones</h2>
+<p>Seleccione un estudiante para ver o modificar sus materias inscritas.</p>
+
+<div class="card">
+	<table>
+		<thead>
+			<tr>
+				<th>Código</th>
+				<th>Nombre del Estudiante</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for estudiante in estudiantes %}
+			<tr>
+				<td>{{ estudiante.codigo_estudiante }}</td>
+				<td>{{ estudiante.nombre }} {{ estudiante.apellido }}</td>
+				<td>
+					<a
+						href="{{ url_for('detalle_inscripcion_estudiante', estudiante_id=estudiante.id) }}"
+						class="btn"
+						>Gestionar Inscripciones</a
+					>
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td colspan="3">No hay estudiantes activos para gestionar.</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}

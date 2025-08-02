@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% block title %}Historial de Asistencias{% endblock
+%} {% block content %}
+<h2>Historial de Asistencias para: {{ materia.nombre_materia }}</h2>
+<a href="{{ url_for('index') }}" class="btn">← Volver a Materias</a>
+<div class="card">
+	<table>
+		<thead>
+			<tr>
+				<th>Fecha</th>
+				<th>Estudiante</th>
+				<th>Estado Actual</th>
+				<th>Acción</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for asistencia in asistencias|sort(attribute='fecha', reverse=True) %}
+			<tr>
+				<td>{{ asistencia.fecha.strftime('%d-%m-%Y') }}</td>
+				<td>
+					{{ asistencia.inscripcion.estudiante.nombre }} {{
+					asistencia.inscripcion.estudiante.apellido }}
+				</td>
+				<td>
+					{% if asistencia.presente %}
+					<span style="color: green; font-weight: bold">✔ Presente</span>
+					{% else %}
+					<span style="color: red; font-weight: bold">✖ Ausente</span>
+					{% endif %}
+				</td>
+				<td>
+					<!-- Formulario para cambiar el estado de la asistencia -->
+					<form
+						action="{{ url_for('modificar_asistencia', asistencia_id=asistencia.id) }}"
+						method="POST"
+					>
+						{% if asistencia.presente %}
+						<button
+							type="submit"
+							class="btn"
+							style="background-color: #f0ad4e; color: black"
+						>
+							Marcar como Ausente
+						</button>
+						{% else %}
+						<button type="submit" class="btn" style="background-color: #5cb85c">
+							Marcar como Presente
+						</button>
+						{% endif %}
+					</form>
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td colspan="4">No hay registros de asistencia para esta materia.</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}

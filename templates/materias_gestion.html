@@ -1,0 +1,59 @@
+{% extends "base.html" %} {% block title %}Gestión de Materias{% endblock %} {%
+block content %}
+<h2>Gestión de Materias</h2>
+<p>
+	<a href="{{ url_for('nueva_materia') }}" class="btn">Añadir Nueva Materia</a>
+	<a href="{{ url_for('index') }}" class="btn" style="background-color: #6c757d"
+		>Volver a la vista de Asistencia</a
+	>
+</p>
+
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages
+%} {% for category, message in messages %}
+<div class="alert alert-{{ category }}">{{ message }}</div>
+{% endfor %} {% endif %} {% endwith %}
+
+<div class="card">
+	<table>
+		<thead>
+			<tr>
+				<th>Código</th>
+				<th>Nombre de la Materia</th>
+				<th>Profesor Asignado</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for materia in materias %}
+			<tr>
+				<td>{{ materia.codigo_materia }}</td>
+				<td>{{ materia.nombre_materia }}</td>
+				<td>{{ materia.profesor.nombre }} {{ materia.profesor.apellido }}</td>
+				<td>
+					<a
+						href="{{ url_for('editar_materia', materia_id=materia.id) }}"
+						class="btn"
+						style="background-color: #ffc107; color: #333"
+						>Editar</a
+					>
+					<form
+						action="{{ url_for('eliminar_materia', materia_id=materia.id) }}"
+						method="POST"
+						style="display: inline"
+						onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta materia? Se eliminarán también todas sus inscripciones y registros de asistencia.');"
+					>
+						<button type="submit" class="btn" style="background-color: #dc3545">
+							Eliminar
+						</button>
+					</form>
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td colspan="4">No hay materias registradas.</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}

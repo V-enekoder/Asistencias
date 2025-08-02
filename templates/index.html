@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %}Materias Disponibles{% endblock %} {%
+block content %}
+<h2>Materias Disponibles</h2>
+{% for materia in materias %}
+<div class="card">
+	<h3>{{ materia.nombre_materia }} ({{ materia.codigo_materia }})</h3>
+	<p>Profesor: {{ materia.profesor.nombre }} {{ materia.profesor.apellido }}</p>
+	<a href="{{ url_for('materia_detalle', materia_id=materia.id) }}" class="btn"
+		>Tomar Asistencia</a
+	>
+	<a
+		href="{{ url_for('ver_asistencias', materia_id=materia.id) }}"
+		class="btn"
+		style="background-color: #6c757d"
+		>Ver Historial</a
+	>
+</div>
+{% else %}
+<p>No hay materias registradas.</p>
+{% endfor %} {% endblock %}
