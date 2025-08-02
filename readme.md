@@ -46,7 +46,7 @@ Sigue estos pasos para configurar el entorno y ejecutar la aplicación en tu má
 Si estás usando git, clona el repositorio. De lo contrario, asegúrate de que todos los archivos del proyecto estén en una misma carpeta.
 
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/V-enekoder/Asistencias.git
 cd proyecto_asistencia
 ```
 
