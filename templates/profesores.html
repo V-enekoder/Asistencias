@@ -1,61 +1,31 @@
 {% extends "base.html" %} {% block title %}Gestión de Profesores{% endblock %}
 {% block content %}
-<h2>Gestión de Profesores</h2>
-<p>
-	<a href="{{ url_for('nuevo_profesor') }}" class="btn"
-		>Añadir Nuevo Profesor</a
-	>
-	<a href="{{ url_for('index') }}" class="btn" style="background-color: #6c757d"
-		>Volver a Materias</a
-	>
-</p>
+<div class="header">
+    <h1>Gestión de Profesores</h1>
+    <a href="{{ url_for('nuevo_profesor') }}" class="btn create-btn">Registrar Profesor</a>
+</div>
 
 {% with messages = get_flashed_messages(with_categories=true) %} {% if messages
 %} {% for category, message in messages %}
 <div class="alert alert-{{ category }}">{{ message }}</div>
 {% endfor %} {% endif %} {% endwith %}
 
+{% for profesor in profesores %}
 <div class="card">
-	<table>
-		<thead>
-			<tr>
-				<th>Nombre</th>
-				<th>Apellido</th>
-				<th>Especialidad</th>
-				<th>Acciones</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for profesor in profesores %}
-			<tr>
-				<td>{{ profesor.nombre }}</td>
-				<td>{{ profesor.apellido }}</td>
-				<td>{{ profesor.especialidad }}</td>
-				<td>
-					<a
-						href="{{ url_for('editar_profesor', profesor_id=profesor.id) }}"
-						class="btn"
-						style="background-color: #ffc107; color: #333"
-						>Editar</a
-					>
-					<form
-						action="{{ url_for('eliminar_profesor', profesor_id=profesor.id) }}"
-						method="POST"
-						style="display: inline"
-						onsubmit="return confirm('¿Estás seguro de que quieres eliminar a este profesor?');"
-					>
-						<button type="submit" class="btn" style="background-color: #dc3545">
-							Eliminar
-						</button>
-					</form>
-				</td>
-			</tr>
-			{% else %}
-			<tr>
-				<td colspan="4">No hay profesores activos registrados.</td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+	<div>
+		<h2>{{ profesor.nombre }} {{ profesor.apellido }}</h2>
+		<p>Especialidad: {{ profesor.especialidad }}</p>
+		<p>Estado: Activo</p>
+	</div>
+    <div class="action-buttons">
+        <a href="{{ url_for('editar_profesor', profesor_id=profesor.id) }}" class="btn btn-card">Editar</a>
+        <a href="#" class="btn btn-card">Ver materias dictadas</a>
+        <form action="{{ url_for('eliminar_profesor', profesor_id=profesor.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar este profesor?');">
+            <button type="submit" class="btn btn-delete">Eliminar</button>
+        </form>
+    </div>
 </div>
+{% else %}
+	<p>No hay profesores registrados.</p>
+{% endfor %}
 {% endblock %}

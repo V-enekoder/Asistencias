@@ -1,20 +1,29 @@
-{% extends "base.html" %} {% block title %}Materias Disponibles{% endblock %} {%
-block content %}
-<h2>Materias Disponibles</h2>
-{% for materia in materias %}
-<div class="card">
-	<h3>{{ materia.nombre_materia }} ({{ materia.codigo_materia }})</h3>
-	<p>Profesor: {{ materia.profesor.nombre }} {{ materia.profesor.apellido }}</p>
-	<a href="{{ url_for('materia_detalle', materia_id=materia.id) }}" class="btn"
-		>Tomar Asistencia</a
-	>
-	<a
-		href="{{ url_for('ver_asistencias', materia_id=materia.id) }}"
-		class="btn"
-		style="background-color: #6c757d"
-		>Ver Historial</a
-	>
+{% extends "base.html" %}
+{% block title %}Gestión de Materias{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Gestión de Materias</h1>
+    <a href="{{ url_for('nueva_materia') }}" class="btn create-btn">Crear nueva materia</a>
 </div>
+
+{% for materia in materias %}
+	<div class="card">
+		<div>
+			<h2>{{ materia.nombre_materia }}</h2>
+			<p>Código: {{ materia.codigo_materia }}</p>
+			<p>Profesor(a): {{ materia.profesor.nombre }} {{ materia.profesor.apellido }}</p>
+		</div>
+		<div class="action-buttons">
+			<a href="{{ url_for('editar_materia', materia_id=materia.id) }}" class="btn btn-card">Editar</a>
+			<a href="{{ url_for('materia_detalle', materia_id=materia.id) }}" class="btn btn-card">Tomar Asistencia</a>
+			<a href="{{ url_for('ver_asistencias', materia_id=materia.id) }}" class="btn btn-card">Ver historial</a>
+			<form action="{{ url_for('eliminar_materia', materia_id=materia.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar esta materia?');">
+				<button type="submit" class="btn btn-delete">Eliminar</button>
+			</form>
+		</div>
+	</div>
 {% else %}
-<p>No hay materias registradas.</p>
-{% endfor %} {% endblock %}
+	<p>No hay materias registradas.</p>
+{% endfor %}
+{% endblock %}

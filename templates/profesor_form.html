@@ -1,49 +1,26 @@
 {% extends "base.html" %} {% block title %}{% if profesor %}Editar{% else
 %}Nuevo{% endif %} Profesor{% endblock %} {% block content %}
-<h2>{% if profesor %}Editar{% else %}Añadir Nuevo{% endif %} Profesor</h2>
+<h1>{% if profesor %}Editar{% else %}Añadir Nuevo{% endif %} Profesor</h1>
 
-<div class="card">
+<div class="form-card">
 	<form method="POST">
 		<div style="margin-bottom: 15px">
 			<label for="nombre">Nombre:</label>
-			<input
-				type="text"
-				id="nombre"
-				name="nombre"
-				value="{{ profesor.nombre if profesor else '' }}"
-				required
-				style="width: 100%; padding: 8px"
-			/>
+			<input type="text" id="nombre" name="nombre" value="{{ profesor.nombre if profesor else '' }}" required />
 		</div>
 		<div style="margin-bottom: 15px">
 			<label for="apellido">Apellido:</label>
-			<input
-				type="text"
-				id="apellido"
-				name="apellido"
-				value="{{ profesor.apellido if profesor else '' }}"
-				required
-				style="width: 100%; padding: 8px"
-			/>
+			<input type="text" id="apellido" name="apellido" value="{{ profesor.apellido if profesor else '' }}" required />
 		</div>
 		<div style="margin-bottom: 20px">
 			<label for="especialidad">Especialidad:</label>
-			<input
-				type="text"
-				id="especialidad"
-				name="especialidad"
-				value="{{ profesor.especialidad if profesor else '' }}"
-				style="width: 100%; padding: 8px"
-			/>
+			<input type="text" id="especialidad" name="especialidad" value="{{ profesor.especialidad if profesor else '' }}" />
 		</div>
 
-		<button type="submit" class="btn">Guardar Cambios</button>
-		<a
-			href="{{ url_for('lista_profesores') }}"
-			class="btn"
-			style="background-color: #6c757d"
-			>Cancelar</a
-		>
+		<div class="form-buttons">
+			<button type="submit" class="btn btn-accept">Guardar Cambios</button>
+			<a href="{{ url_for('lista_profesores') }}" class="btn btn-cancel">Cancelar</a>
+		</div>
 	</form>
 </div>
 {% endblock %}

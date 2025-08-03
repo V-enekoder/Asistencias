@@ -1,61 +1,32 @@
 {% extends "base.html" %} {% block title %}Gestión de Estudiantes{% endblock %}
 {% block content %}
-<h2>Gestión de Estudiantes</h2>
-<p>
-	<a href="{{ url_for('nuevo_estudiante') }}" class="btn"
-		>Añadir Nuevo Estudiante</a
-	>
-	<a href="{{ url_for('index') }}" class="btn" style="background-color: #6c757d"
-		>Volver a Materias</a
-	>
-</p>
+
+<div class="header">
+    <h1>Gestión de Estudiantes</h1>
+    <a href="{{ url_for('nuevo_estudiante') }}" class="btn create-btn">Registrar Estudiante</a>
+</div>
 
 {% with messages = get_flashed_messages(with_categories=true) %} {% if messages
 %} {% for category, message in messages %}
 <div class="alert alert-{{ category }}">{{ message }}</div>
 {% endfor %} {% endif %} {% endwith %}
 
-<div class="card">
-	<table>
-		<thead>
-			<tr>
-				<th>Código</th>
-				<th>Nombre</th>
-				<th>Apellido</th>
-				<th>Acciones</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for estudiante in estudiantes %}
-			<tr>
-				<td>{{ estudiante.codigo_estudiante }}</td>
-				<td>{{ estudiante.nombre }}</td>
-				<td>{{ estudiante.apellido }}</td>
-				<td>
-					<a
-						href="{{ url_for('editar_estudiante', estudiante_id=estudiante.id) }}"
-						class="btn"
-						style="background-color: #ffc107; color: #333"
-						>Editar</a
-					>
-					<form
-						action="{{ url_for('eliminar_estudiante', estudiante_id=estudiante.id) }}"
-						method="POST"
-						style="display: inline"
-						onsubmit="return confirm('¿Estás seguro de que quieres eliminar a este estudiante? No se podrá deshacer.');"
-					>
-						<button type="submit" class="btn" style="background-color: #dc3545">
-							Eliminar
-						</button>
-					</form>
-				</td>
-			</tr>
-			{% else %}
-			<tr>
-				<td colspan="4">No hay estudiantes activos registrados.</td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-</div>
+{% for estudiante in estudiantes %}
+	<div class="card">
+		<div>
+			<h2>{{ estudiante.nombre }} {{ estudiante.apellido }}</h2>
+			<p>Código: {{ estudiante.codigo_estudiante }}</p>
+			<p>Estado: Activo</p>
+		</div>
+		<div class="action-buttons">
+			<a href="{{ url_for('editar_estudiante', estudiante_id=estudiante.id) }}" class="btn btn-card">Editar</a>
+			<a href="{{ url_for('detalle_inscripcion_estudiante', estudiante_id=estudiante.id) }}" class="btn btn-card">Ver materias inscritas</a>
+			<form action="{{ url_for('eliminar_estudiante', estudiante_id=estudiante.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar este estudiante?');">
+				<button type="submit" class="btn btn-delete">Eliminar</button>
+			</form>
+		</div>
+	</div>
+{% else %}
+	<p>No hay estudiantes registrados.</p>
+{% endfor %}
 {% endblock %}

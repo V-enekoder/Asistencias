@@ -4,49 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{% block title %}Control de Asistencia{% endblock %}</title>
-		<link
-			rel="stylesheet"
-			href="{{ url_for('static', filename='css/style.css') }}"
-		/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kadwa:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/77a9d4f306.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<header>
-			<h1>
-				<a
-					href="{{ url_for('index') }}"
-					style="color: white; text-decoration: none"
-				>
-					Sistema de Control de Asistencias
+		<div class="sidebar-layout">
+			<aside class="sidebar">
+				<a href="{{ url_for('index') }}" class="sidebar-btn">
+					<i class="fa-solid fa-book-open fa-xl" style="color: #ffffff;"></i>
+					Gestionar Materias</a>
+				<a href="{{ url_for('lista_profesores') }}" class="sidebar-btn">
+					<i class="fa-solid fa-person-chalkboard fa-xl" style="color: #ffffff;"></i>
+					Gestionar Profesores
 				</a>
-			</h1>
+				<a href="{{ url_for('lista_estudiantes') }}" class="sidebar-btn">
+					<i class="fa-solid fa-user-graduate fa-xl" style="color: #ffffff;"></i>
+					Gestionar Estudiantes</a>
+			</aside>
 
-			<nav>
-				<a href="{{ url_for('index') }}" style="color: white; margin: 0 15px"
-					>Materias</a
-				>
-				<a
-					href="{{ url_for('lista_estudiantes') }}"
-					style="color: white; margin: 0 15px"
-					>Estudiantes</a
-				>
-				<a
-					href="{{ url_for('lista_profesores') }}"
-					style="color: white; margin: 0 15px"
-					>Profesores</a
-				>
-				<a
-					href="{{ url_for('lista_materias') }}"
-					style="color: white; margin: 0 15px"
-					>Gestionar Materias</a
-				>
-				<a
-					href="{{ url_for('gestion_inscripciones') }}"
-					style="color: white; margin: 0 10px"
-					>Inscripciones</a
-				>
-			</nav>
-		</header>
-
-		<div class="container">{% block content %}{% endblock %}</div>
+			<main class="main-content">
+				{% block content %}{% endblock %}
+			</main>
+		</div>
 	</body>
 </html>

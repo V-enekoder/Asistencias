@@ -206,7 +206,7 @@ def eliminar_profesor(profesor_id):
 def lista_materias():
     """Lee y muestra todas las materias para su gestión."""
     materias = session.query(Materia).join(Profesor).filter(Profesor.is_active == True).order_by(Materia.nombre_materia).all()
-    return render_template('materias_gestion.html', materias=materias)
+    return render_template('index.html', materias=materias)
 
 @app.route('/materias/nuevo', methods=['GET', 'POST'])
 def nueva_materia():
@@ -275,7 +275,7 @@ def eliminar_materia(materia_id):
 def gestion_inscripciones():
     """Página principal para la gestión de inscripciones, muestra lista de estudiantes."""
     estudiantes = session.query(Estudiante).filter_by(is_active=True).order_by(Estudiante.apellido).all()
-    return render_template('inscripciones_lista_estudiantes.html', estudiantes=estudiantes)
+    return render_template('estudiantes.html', estudiantes=estudiantes)
 
 @app.route('/inscripciones/estudiante/<int:estudiante_id>')
 def detalle_inscripcion_estudiante(estudiante_id):

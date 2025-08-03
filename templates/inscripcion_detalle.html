@@ -1,14 +1,13 @@
 {% extends "base.html" %} {% block title %}Inscripciones de {{ estudiante.nombre
 }}{% endblock %} {% block content %}
-<h2>Inscripciones de: {{ estudiante.nombre }} {{ estudiante.apellido }}</h2>
 <p>
 	<a
 		href="{{ url_for('gestion_inscripciones') }}"
-		class="btn"
-		style="background-color: #6c757d"
-		>← Volver a la lista de estudiantes</a
+		class="btn create-btn"
+		>← Volver</a
 	>
 </p>
+<h1>Inscripciones de: {{ estudiante.nombre }} {{ estudiante.apellido }}</h1>
 
 {% with messages = get_flashed_messages(with_categories=true) %} {% if messages
 %} {% for category, message in messages %}
@@ -16,79 +15,75 @@
 {% endfor %} {% endif %} {% endwith %}
 
 <!-- SECCIÓN PARA INSCRIBIR EN NUEVAS MATERIAS -->
-<div class="card">
-	<h3>Inscribir en Nueva Materia</h3>
-	<form action="{{ url_for('inscribir_estudiante') }}" method="POST">
-		<input type="hidden" name="estudiante_id" value="{{ estudiante.id }}" />
+ <div class="inscription-card">
+	 <div class="new-inscription-card">
+		 <h3>Inscribir en Nueva Materia</h3>
+		 <form action="{{ url_for('inscribir_estudiante') }}" method="POST">
+			 <input type="hidden" name="estudiante_id" value="{{ estudiante.id }}" />
+	 
+			 <div style="margin-bottom: 15px">
+				 <label for="materia_id">Materias Disponibles:</label>
+				 <select name="materia_id" id="materia_id" required>
+					 <option value="">-- Seleccione una materia --</option>
+					 {% for materia in materias_disponibles %}
+					 <option value="{{ materia.id }}">
+						 {{ materia.nombre_materia }} ({{ materia.codigo_materia }})
+					 </option>
+					 {% endfor %}
+				 </select>
+			 </div>
 
-		<div style="margin-bottom: 15px">
-			<label for="materia_id">Materias Disponibles:</label>
-			<select
-				name="materia_id"
-				id="materia_id"
-				required
-				style="width: 100%; padding: 8px"
-			>
-				<option value="">-- Seleccione una materia --</option>
-				{% for materia in materias_disponibles %}
-				<option value="{{ materia.id }}">
-					{{ materia.nombre_materia }} ({{ materia.codigo_materia }})
-				</option>
-				{% endfor %}
-			</select>
-		</div>
-
-		<button type="submit" class="btn">Inscribir Estudiante</button>
-	</form>
-</div>
-
-<!-- SECCIÓN PARA VER MATERIAS YA INSCRITAS -->
-<div class="card">
-	<h3>Materias Inscritas Actualmente</h3>
-	<table>
-		<thead>
-			<tr>
-				<th>Materia</th>
-				<th>Profesor</th>
-				<th>Tasa de Asistencia</th>
-				<th>Acción</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for dato in datos_inscripciones %}
-			<tr>
-				<td>{{ dato.inscripcion.materia.nombre_materia }}</td>
-				<td>
-					{{ dato.inscripcion.materia.profesor.nombre }} {{
-					dato.inscripcion.materia.profesor.apellido }}
-				</td>
-				<td style="font-weight: bold">
-					{{ dato.tasa }}
-					<span style="font-size: 0.8em; color: #666"
-						>({{ dato.detalle }})</span
-					>
-				</td>
-				<td>
-					<form
-						action="{{ url_for('anular_inscripcion', inscripcion_id=dato.inscripcion.id) }}"
-						method="POST"
-						onsubmit="return confirm('¿Seguro que quieres anular esta inscripción? Se borrará todo el historial de asistencia asociado.');"
-					>
-						<button type="submit" class="btn" style="background-color: #dc3545">
-							Anular Inscripción
-						</button>
-					</form>
-				</td>
-			</tr>
-			{% else %}
-			<tr>
-				<td colspan="4">
-					Este estudiante no está inscrito en ninguna materia.
-				</td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-</div>
+			 <div class="form-buttons">
+				 <button type="submit" class="btn btn-accept">Inscribir Estudiante</button>
+			 </div>
+		 </form>
+	 </div>
+	 
+	 <!-- SECCIÓN PARA VER MATERIAS YA INSCRITAS -->
+	 <div class="inscription-list-card">
+		 <h3>Materias Inscritas Actualmente</h3>
+		 <table>
+			 <thead>
+				 <tr>
+					 <th>Materia</th>
+					 <th>Profesor</th>
+					 <th>Tasa de Asistencia</th>
+					 <th>Acción</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+				 {% for dato in datos_inscripciones %}
+				 <tr>
+					 <td> {{ dato.inscripcion.materia.nombre_materia }}</td>
+					 <td> {{ dato.inscripcion.materia.profesor.nombre }} {{ dato.inscripcion.materia.profesor.apellido }} </td>
+					 <td style="font-weight: bold"> 
+						{{ dato.tasa }}
+						<span style="font-size: 0.8em; color: #666">
+							({{ dato.detalle }})
+						</span>
+					 </td>
+					 <td>
+						 <form
+							 action="{{ url_for('anular_inscripcion', inscripcion_id=dato.inscripcion.id) }}"
+							 method="POST"
+							 onsubmit="return confirm('¿Seguro que quieres anular esta inscripción? Se borrará todo el historial de asistencia asociado.');"
+						 >
+							 <button type="submit" class="btn btn-cancel">
+								 Anular Inscripción
+							 </button>
+						 </form>
+					 </td>
+				 </tr>
+				 {% else %}
+				 <tr>
+					 <td colspan="4">
+						 Este estudiante no está inscrito en ninguna materia.
+					 </td>
+				 </tr>
+				 {% endfor %}
+			 </tbody>
+		 </table>
+	 </div>
+ </div>
 
 {% endblock %}
