@@ -1,14 +1,15 @@
 {% extends "base.html" %} {% block title %}Asistencia para {{
 materia.nombre_materia }}{% endblock %} {% block content %}
 <h2>Tomar Asistencia para: {{ materia.nombre_materia }}</h2>
-<p>Fecha: {{ today }}</p>
 
-<div class="card">
+<div class="form-card no-padding-top">
 	<form action="{{ url_for('registrar_asistencia') }}" method="POST">
 		<input type="hidden" name="materia_id" value="{{ materia.id }}" />
 		<input type="hidden" name="fecha" value="{{ today }}" />
-
+		
+		<p>Asistencia para la fecha: {{ today }}</p>
 		<h3>Estudiantes Inscritos</h3>
+		
 		<table>
 			<thead>
 				<tr>
@@ -26,12 +27,7 @@ materia.nombre_materia }}{% endblock %} {% block content %}
 						inscripcion.estudiante.apellido }}
 					</td>
 					<td>
-						<input
-							type="checkbox"
-							name="presente"
-							value="{{ inscripcion.id }}"
-							checked
-						/>
+						<input type="checkbox" name="presente" value="{{ inscripcion.id }}" checked/>
 					</td>
 				</tr>
 				{% else %}
@@ -42,7 +38,10 @@ materia.nombre_materia }}{% endblock %} {% block content %}
 			</tbody>
 		</table>
 		<br />
-		<button type="submit" class="btn">Registrar Asistencia</button>
+
+		<div class="form-buttons">
+			<button type="submit" class="btn btn-accept">Registrar Asistencia</button>
+		</div>
 	</form>
 </div>
 {% endblock %}

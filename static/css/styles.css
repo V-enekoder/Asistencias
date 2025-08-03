@@ -3,7 +3,7 @@ body {
     font-family: kadwa, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #98C1D9;
     color: #000;
 }
 
@@ -30,13 +30,16 @@ h3 {
 }
 
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 275px;
-    padding-block-start: 100px;
-    height: 100vh;
+    padding-top: 100px;
     background-color: #3D5A80;
 }
 
@@ -60,7 +63,8 @@ h3 {
 }
 
 .main-content {
-    flex-grow: 1;
+    margin-left: 275px;
+    width: calc(100% - 275px);
     background-color: #98C1D9;
     padding-block-start: 40px;
     padding-inline: 35px;
@@ -81,6 +85,13 @@ h3 {
     margin-block: 30px;
     margin-inline: 100px;
     border-radius: 15px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: 0.25s ease-in;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.1);
 }
 
 .form-card form, .inscription-card form {
@@ -98,6 +109,15 @@ h3 {
     border-radius: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.no-padding-top {
+    padding-block-start: 25px;
+}
+
+
+.form-card .date-div {
+    text-align: left;
 }
 
 .inscription-card {
@@ -137,10 +157,24 @@ h3 {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.form-card td {
+    text-align: center;
+    padding-inline: 25px;
+
+}
+
+.no-padding-top h3 {
+    margin-block-end: 20px;
+}
+
+.no-padding-top input {
+    width: 50px;
+}
+
+
 .form-card select {
     width: 375px;
 }
-
 
 .form-buttons {
     display: flex;
@@ -164,27 +198,29 @@ h3 {
     color: #000000;
 }
 
-.form-buttons .btn-accept, .form-buttons .btn-cancel, .btn-cancel {
-    font-size: 16px;
-    padding: 10px 30px;
+.btn-accept, .btn-cancel {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-block: 5px;
     border: none;
     border-radius: 30px;
     transition: background-color 0.3s ease;
 }
 
-.form-buttons .btn-accept {
+.btn-accept {
     background-color: #34b233;
 }
 
-.form-buttons .btn-accept:hover {
+.btn-accept:hover {
     background-color: #2a911f;
 }
 
-.form-buttons .btn-cancel, .btn-cancel {
+.btn-cancel {
     background-color: #ff0f0f;
 }
 
-.form-buttons .btn-cancel:hover, .btn-cancel:hover {
+.btn-cancel:hover {
     background-color: #cc0c0c;
 }
 

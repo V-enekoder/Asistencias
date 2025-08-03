@@ -16,7 +16,6 @@
 		<div>
 			<h2>{{ estudiante.nombre }} {{ estudiante.apellido }}</h2>
 			<p>Código: {{ estudiante.codigo_estudiante }}</p>
-			<p>Estado: Activo</p>
 		</div>
 		<div class="action-buttons">
 			<a href="{{ url_for('editar_estudiante', estudiante_id=estudiante.id) }}" class="btn btn-card">Editar</a>

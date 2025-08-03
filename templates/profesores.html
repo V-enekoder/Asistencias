@@ -15,7 +15,6 @@
 	<div>
 		<h2>{{ profesor.nombre }} {{ profesor.apellido }}</h2>
 		<p>Especialidad: {{ profesor.especialidad }}</p>
-		<p>Estado: Activo</p>
 	</div>
     <div class="action-buttons">
         <a href="{{ url_for('editar_profesor', profesor_id=profesor.id) }}" class="btn btn-card">Editar</a>

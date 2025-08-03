@@ -1,11 +1,7 @@
 {% extends "base.html" %} {% block title %}Inscripciones de {{ estudiante.nombre
 }}{% endblock %} {% block content %}
 <p>
-	<a
-		href="{{ url_for('gestion_inscripciones') }}"
-		class="btn create-btn"
-		>← Volver</a
-	>
+	<a href="{{ url_for('gestion_inscripciones') }}" class="btn create-btn">← Volver</a>
 </p>
 <h1>Inscripciones de: {{ estudiante.nombre }} {{ estudiante.apellido }}</h1>
 

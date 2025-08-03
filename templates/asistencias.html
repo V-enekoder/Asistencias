@@ -1,8 +1,11 @@
 {% extends "base.html" %} {% block title %}Historial de Asistencias{% endblock
 %} {% block content %}
-<h2>Historial de Asistencias para: {{ materia.nombre_materia }}</h2>
-<a href="{{ url_for('index') }}" class="btn">← Volver a Materias</a>
-<div class="card">
+<p>
+	<a href="{{ url_for('index') }}" class="btn create-btn">← Volver</a>
+</p>
+<h1>Historial de Asistencias para: {{ materia.nombre_materia }}</h1>
+
+<div class="form-card">
 	<table>
 		<thead>
 			<tr>
@@ -34,15 +37,11 @@
 						method="POST"
 					>
 						{% if asistencia.presente %}
-						<button
-							type="submit"
-							class="btn"
-							style="background-color: #f0ad4e; color: black"
-						>
+						<button type="submit" class="btn btn-cancel">
 							Marcar como Ausente
 						</button>
 						{% else %}
-						<button type="submit" class="btn" style="background-color: #5cb85c">
+						<button type="submit" class="btn btn-accept">
 							Marcar como Presente
 						</button>
 						{% endif %}
