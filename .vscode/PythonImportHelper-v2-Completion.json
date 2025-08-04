@@ -1,0 +1,707 @@
+[
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Date",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Estudiante",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Materia",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Inscripcion",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Asistencia",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Profesor",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Asistencia",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Profesor",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Estudiante",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Materia",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Inscripcion",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def index():\n    \"\"\"Página principal que muestra la lista de materias.\"\"\"\n    # --- CONSULTA MODIFICADA ---\n    # Unimos con Profesor para filtrar por 'is_active'\n    materias = session.query(Materia).join(Profesor).filter(Profesor.is_active == True).all()\n    return render_template('index.html', materias=materias)\n@app.route('/materia/<int:materia_id>')\ndef materia_detalle(materia_id):\n    \"\"\"Página para tomar asistencia de una materia específica.\"\"\"\n    materia = session.query(Materia).filter_by(id=materia_id).one()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "materia_detalle",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def materia_detalle(materia_id):\n    \"\"\"Página para tomar asistencia de una materia específica.\"\"\"\n    materia = session.query(Materia).filter_by(id=materia_id).one()\n    inscripciones = session.query(Inscripcion).join(Estudiante).filter(\n        Inscripcion.materia_id == materia_id,\n        Estudiante.is_active == True\n    ).all()\n    today = datetime.date.today().strftime(\"%Y-%m-%d\")\n    return render_template('materia_detalle.html', materia=materia, inscripciones=inscripciones, today=today)\n@app.route('/registrar_asistencia', methods=['POST'])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "registrar_asistencia",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def registrar_asistencia():\n    \"\"\"Procesa el formulario de asistencia.\"\"\"\n    materia_id = request.form.get('materia_id')\n    fecha_str = request.form.get('fecha')\n    fecha = datetime.datetime.strptime(fecha_str, '%Y-%m-%d').date()\n    # Obtener todas las inscripciones para esta materia\n    inscripciones_totales = session.query(Inscripcion).filter_by(materia_id=materia_id).all()\n    # Obtener la lista de IDs de inscripciones de los estudiantes marcados como presentes\n    presentes_ids = request.form.getlist('presente') # getlist obtiene todos los valores con el mismo name\n    presentes_ids = [int(id) for id in presentes_ids] # Convertir a enteros",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "ver_asistencias",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def ver_asistencias(materia_id):\n    \"\"\"Muestra el historial de asistencias de una materia.\"\"\"\n    materia = session.query(Materia).filter_by(id=materia_id).one()\n    asistencias = session.query(Asistencia).join(Inscripcion).filter(Inscripcion.materia_id == materia_id).all()\n    return render_template('asistencias.html', materia=materia, asistencias=asistencias)\n# --- CRUD DE ESTUDIANTES ---\n@app.route('/estudiantes')\ndef lista_estudiantes():\n    \"\"\"Lee y muestra todos los estudiantes ACTIVOS.\"\"\"\n    estudiantes = session.query(Estudiante).filter_by(is_active=True).order_by(Estudiante.apellido).all()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "lista_estudiantes",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def lista_estudiantes():\n    \"\"\"Lee y muestra todos los estudiantes ACTIVOS.\"\"\"\n    estudiantes = session.query(Estudiante).filter_by(is_active=True).order_by(Estudiante.apellido).all()\n    return render_template('estudiantes.html', estudiantes=estudiantes)\n@app.route('/estudiantes/nuevo', methods=['GET', 'POST'])\ndef nuevo_estudiante():\n    \"\"\"Crea un nuevo estudiante.\"\"\"\n    if request.method == 'POST':\n        codigo = request.form['codigo_estudiante']\n        # Verificar si el código ya existe",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "nuevo_estudiante",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def nuevo_estudiante():\n    \"\"\"Crea un nuevo estudiante.\"\"\"\n    if request.method == 'POST':\n        codigo = request.form['codigo_estudiante']\n        # Verificar si el código ya existe\n        existente = session.query(Estudiante).filter_by(codigo_estudiante=codigo).first()\n        if existente:\n            flash('El código de estudiante ya existe.', 'danger')\n            return render_template('estudiante_form.html')\n        nuevo = Estudiante(",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "editar_estudiante",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def editar_estudiante(estudiante_id):\n    \"\"\"Actualiza los datos de un estudiante.\"\"\"\n    estudiante = session.query(Estudiante).get(estudiante_id)\n    if not estudiante:\n        return \"Estudiante no encontrado\", 404\n    if request.method == 'POST':\n        codigo = request.form['codigo_estudiante']\n        # Verificar si el nuevo código ya lo tiene otro estudiante\n        existente = session.query(Estudiante).filter(Estudiante.codigo_estudiante == codigo, Estudiante.id != estudiante_id).first()\n        if existente:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "eliminar_estudiante",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def eliminar_estudiante(estudiante_id):\n    \"\"\"Elimina un estudiante (Soft Delete).\"\"\"\n    estudiante = session.query(Estudiante).get(estudiante_id)\n    if estudiante:\n        estudiante.is_active = False \n        session.commit()\n        flash('Estudiante eliminado con éxito.', 'warning')\n    return redirect(url_for('lista_estudiantes'))\n# --- CRUD DE PROFESORES ---\n@app.route('/profesores')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "lista_profesores",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def lista_profesores():\n    \"\"\"Lee y muestra todos los profesores ACTIVOS.\"\"\"\n    profesores = session.query(Profesor).filter_by(is_active=True).order_by(Profesor.apellido).all()\n    return render_template('profesores.html', profesores=profesores)\n@app.route('/profesores/nuevo', methods=['GET', 'POST'])\ndef nuevo_profesor():\n    \"\"\"Crea un nuevo profesor.\"\"\"\n    if request.method == 'POST':\n        nuevo = Profesor(\n            nombre=request.form['nombre'],",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "nuevo_profesor",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def nuevo_profesor():\n    \"\"\"Crea un nuevo profesor.\"\"\"\n    if request.method == 'POST':\n        nuevo = Profesor(\n            nombre=request.form['nombre'],\n            apellido=request.form['apellido'],\n            especialidad=request.form['especialidad']\n        )\n        session.add(nuevo)\n        session.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "editar_profesor",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def editar_profesor(profesor_id):\n    \"\"\"Actualiza los datos de un profesor.\"\"\"\n    profesor = session.query(Profesor).get(profesor_id)\n    if not profesor:\n        return \"Profesor no encontrado\", 404\n    if request.method == 'POST':\n        profesor.nombre = request.form['nombre']\n        profesor.apellido = request.form['apellido']\n        profesor.especialidad = request.form['especialidad']\n        session.commit()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "eliminar_profesor",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def eliminar_profesor(profesor_id):\n    \"\"\"Elimina un profesor (Soft Delete).\"\"\"\n    profesor = session.query(Profesor).get(profesor_id)\n    if profesor:\n        # Validar que el profesor no tenga materias activas asignadas\n        materias_asignadas = session.query(Materia).filter_by(profesor_id=profesor.id).count()\n        if materias_asignadas > 0:\n            flash(f'No se puede eliminar al profesor {profesor.nombre} {profesor.apellido} porque tiene {materias_asignadas} materia(s) asignada(s). Reasígnelas primero.', 'danger')\n        else:\n            profesor.is_active = False # Soft Delete",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "lista_materias",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def lista_materias():\n    \"\"\"Lee y muestra todas las materias para su gestión.\"\"\"\n    materias = session.query(Materia).join(Profesor).filter(Profesor.is_active == True).order_by(Materia.nombre_materia).all()\n    return render_template('index.html', materias=materias)\n@app.route('/materias/nuevo', methods=['GET', 'POST'])\ndef nueva_materia():\n    \"\"\"Crea una nueva materia.\"\"\"\n    # Necesitamos la lista de profesores activos para el formulario\n    profesores = session.query(Profesor).filter_by(is_active=True).all()\n    if request.method == 'POST':",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "nueva_materia",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def nueva_materia():\n    \"\"\"Crea una nueva materia.\"\"\"\n    # Necesitamos la lista de profesores activos para el formulario\n    profesores = session.query(Profesor).filter_by(is_active=True).all()\n    if request.method == 'POST':\n        codigo = request.form['codigo_materia']\n        existente = session.query(Materia).filter_by(codigo_materia=codigo).first()\n        if existente:\n            flash('El código de materia ya existe.', 'danger')\n            return render_template('materia_form.html', profesores=profesores)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "editar_materia",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def editar_materia(materia_id):\n    \"\"\"Actualiza los datos de una materia.\"\"\"\n    materia = session.query(Materia).get(materia_id)\n    if not materia:\n        return \"Materia no encontrada\", 404\n    profesores = session.query(Profesor).filter_by(is_active=True).all()\n    if request.method == 'POST':\n        codigo = request.form['codigo_materia']\n        existente = session.query(Materia).filter(Materia.codigo_materia == codigo, Materia.id != materia_id).first()\n        if existente:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "eliminar_materia",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def eliminar_materia(materia_id):\n    \"\"\"Elimina una materia (Hard Delete).\"\"\"\n    materia = session.query(Materia).get(materia_id)\n    if materia:\n        session.delete(materia) # SQLAlchemy se encargará de borrar en cascada gracias a la configuración del modelo\n        session.commit()\n        flash('Materia y todos sus datos asociados han sido eliminados.', 'warning')\n    return redirect(url_for('lista_materias'))\n# --- GESTIÓN DE INSCRIPCIONES ---\n@app.route('/inscripciones')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "gestion_inscripciones",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def gestion_inscripciones():\n    \"\"\"Página principal para la gestión de inscripciones, muestra lista de estudiantes.\"\"\"\n    estudiantes = session.query(Estudiante).filter_by(is_active=True).order_by(Estudiante.apellido).all()\n    return render_template('estudiantes.html', estudiantes=estudiantes)\n@app.route('/inscripciones/estudiante/<int:estudiante_id>')\ndef detalle_inscripcion_estudiante(estudiante_id):\n    \"\"\"Muestra las materias inscritas, disponibles y la tasa de asistencia.\"\"\"\n    estudiante = session.query(Estudiante).get(estudiante_id)\n    if not estudiante:\n        return \"Estudiante no encontrado\", 404",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "detalle_inscripcion_estudiante",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def detalle_inscripcion_estudiante(estudiante_id):\n    \"\"\"Muestra las materias inscritas, disponibles y la tasa de asistencia.\"\"\"\n    estudiante = session.query(Estudiante).get(estudiante_id)\n    if not estudiante:\n        return \"Estudiante no encontrado\", 404\n    # 1. Obtener las inscripciones actuales del estudiante\n    inscripciones_actuales = session.query(Inscripcion).filter_by(estudiante_id=estudiante_id).options(joinedload(Inscripcion.materia)).all()\n    # --- NUEVA LÓGICA: CALCULAR TASA DE ASISTENCIA ---\n    datos_inscripciones = []\n    for inscripcion in inscripciones_actuales:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "inscribir_estudiante",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def inscribir_estudiante():\n    \"\"\"Procesa el formulario para inscribir un estudiante en una materia.\"\"\"\n    estudiante_id = request.form.get('estudiante_id')\n    materia_id = request.form.get('materia_id')\n    # Validar que no exista ya la inscripción\n    existente = session.query(Inscripcion).filter_by(estudiante_id=estudiante_id, materia_id=materia_id).first()\n    if existente:\n        flash('Este estudiante ya está inscrito en esa materia.', 'danger')\n    else:\n        nueva_inscripcion = Inscripcion(estudiante_id=estudiante_id, materia_id=materia_id)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "anular_inscripcion",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def anular_inscripcion(inscripcion_id):\n    \"\"\"Elimina un registro de inscripción (y sus asistencias en cascada).\"\"\"\n    inscripcion = session.query(Inscripcion).get(inscripcion_id)\n    if inscripcion:\n        # Guardamos el ID del estudiante para poder redirigir correctamente\n        estudiante_id = inscripcion.estudiante_id\n        session.delete(inscripcion)\n        session.commit()\n        flash('Inscripción anulada con éxito. Se ha eliminado el historial de asistencia asociado.', 'warning')\n        return redirect(url_for('detalle_inscripcion_estudiante', estudiante_id=estudiante_id))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "modificar_asistencia",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def modificar_asistencia(asistencia_id):\n    \"\"\"Actualiza el estado de un registro de asistencia (presente/ausente).\"\"\"\n    asistencia = session.query(Asistencia).get(asistencia_id)\n    if asistencia:\n        # Invertir el estado actual\n        asistencia.presente = not asistencia.presente\n        session.commit()\n        flash(f\"Se actualizó la asistencia del estudiante {asistencia.inscripcion.estudiante.nombre} para la fecha {asistencia.fecha.strftime('%d-%m-%Y')}.\", 'success')\n        # Redirigir de vuelta a la página de historial de la materia\n        materia_id = asistencia.inscripcion.materia_id",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\napp.secret_key = '123'\n# Conexión a la base de datos\nengine = create_engine('sqlite:///asistencia.db')\nBase.metadata.bind = engine\nDBSession = sessionmaker(bind=engine)\nsession = DBSession()\n@app.route('/')\ndef index():\n    \"\"\"Página principal que muestra la lista de materias.\"\"\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.secret_key",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.secret_key = '123'\n# Conexión a la base de datos\nengine = create_engine('sqlite:///asistencia.db')\nBase.metadata.bind = engine\nDBSession = sessionmaker(bind=engine)\nsession = DBSession()\n@app.route('/')\ndef index():\n    \"\"\"Página principal que muestra la lista de materias.\"\"\"\n    # --- CONSULTA MODIFICADA ---",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "engine = create_engine('sqlite:///asistencia.db')\nBase.metadata.bind = engine\nDBSession = sessionmaker(bind=engine)\nsession = DBSession()\n@app.route('/')\ndef index():\n    \"\"\"Página principal que muestra la lista de materias.\"\"\"\n    # --- CONSULTA MODIFICADA ---\n    # Unimos con Profesor para filtrar por 'is_active'\n    materias = session.query(Materia).join(Profesor).filter(Profesor.is_active == True).all()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Base.metadata.bind",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "Base.metadata.bind = engine\nDBSession = sessionmaker(bind=engine)\nsession = DBSession()\n@app.route('/')\ndef index():\n    \"\"\"Página principal que muestra la lista de materias.\"\"\"\n    # --- CONSULTA MODIFICADA ---\n    # Unimos con Profesor para filtrar por 'is_active'\n    materias = session.query(Materia).join(Profesor).filter(Profesor.is_active == True).all()\n    return render_template('index.html', materias=materias)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "DBSession",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "DBSession = sessionmaker(bind=engine)\nsession = DBSession()\n@app.route('/')\ndef index():\n    \"\"\"Página principal que muestra la lista de materias.\"\"\"\n    # --- CONSULTA MODIFICADA ---\n    # Unimos con Profesor para filtrar por 'is_active'\n    materias = session.query(Materia).join(Profesor).filter(Profesor.is_active == True).all()\n    return render_template('index.html', materias=materias)\n@app.route('/materia/<int:materia_id>')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "session = DBSession()\n@app.route('/')\ndef index():\n    \"\"\"Página principal que muestra la lista de materias.\"\"\"\n    # --- CONSULTA MODIFICADA ---\n    # Unimos con Profesor para filtrar por 'is_active'\n    materias = session.query(Materia).join(Profesor).filter(Profesor.is_active == True).all()\n    return render_template('index.html', materias=materias)\n@app.route('/materia/<int:materia_id>')\ndef materia_detalle(materia_id):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "prof1",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "prof1 = Profesor(nombre=\"Alberto\", apellido=\"García\", especialidad=\"Bases de Datos\")\nprof2 = Profesor(nombre=\"Beatriz\", apellido=\"Campos\", especialidad=\"Desarrollo Web\")\n# Estudiantes\nest1 = Estudiante(nombre=\"Carlos\", apellido=\"Ruiz\", codigo_estudiante=\"E2023001\")\nest2 = Estudiante(nombre=\"Diana\", apellido=\"Solis\", codigo_estudiante=\"E2023002\")\nest3 = Estudiante(nombre=\"Elena\", apellido=\"Mora\", codigo_estudiante=\"E2023003\")\n# Materias\nmat1 = Materia(nombre_materia=\"Bases de Datos Avanzadas\", codigo_materia=\"BDA-101\", profesor=prof1)\nmat2 = Materia(nombre_materia=\"Programación con Python\", codigo_materia=\"PY-101\", profesor=prof2)\nsession.add_all([prof1, prof2, est1, est2, est3, mat1, mat2])",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "prof2",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "prof2 = Profesor(nombre=\"Beatriz\", apellido=\"Campos\", especialidad=\"Desarrollo Web\")\n# Estudiantes\nest1 = Estudiante(nombre=\"Carlos\", apellido=\"Ruiz\", codigo_estudiante=\"E2023001\")\nest2 = Estudiante(nombre=\"Diana\", apellido=\"Solis\", codigo_estudiante=\"E2023002\")\nest3 = Estudiante(nombre=\"Elena\", apellido=\"Mora\", codigo_estudiante=\"E2023003\")\n# Materias\nmat1 = Materia(nombre_materia=\"Bases de Datos Avanzadas\", codigo_materia=\"BDA-101\", profesor=prof1)\nmat2 = Materia(nombre_materia=\"Programación con Python\", codigo_materia=\"PY-101\", profesor=prof2)\nsession.add_all([prof1, prof2, est1, est2, est3, mat1, mat2])\nsession.commit() # Commit para que los IDs se generen",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "est1",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "est1 = Estudiante(nombre=\"Carlos\", apellido=\"Ruiz\", codigo_estudiante=\"E2023001\")\nest2 = Estudiante(nombre=\"Diana\", apellido=\"Solis\", codigo_estudiante=\"E2023002\")\nest3 = Estudiante(nombre=\"Elena\", apellido=\"Mora\", codigo_estudiante=\"E2023003\")\n# Materias\nmat1 = Materia(nombre_materia=\"Bases de Datos Avanzadas\", codigo_materia=\"BDA-101\", profesor=prof1)\nmat2 = Materia(nombre_materia=\"Programación con Python\", codigo_materia=\"PY-101\", profesor=prof2)\nsession.add_all([prof1, prof2, est1, est2, est3, mat1, mat2])\nsession.commit() # Commit para que los IDs se generen\n# Inscripciones\n# Carlos y Diana en Bases de Datos",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "est2",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "est2 = Estudiante(nombre=\"Diana\", apellido=\"Solis\", codigo_estudiante=\"E2023002\")\nest3 = Estudiante(nombre=\"Elena\", apellido=\"Mora\", codigo_estudiante=\"E2023003\")\n# Materias\nmat1 = Materia(nombre_materia=\"Bases de Datos Avanzadas\", codigo_materia=\"BDA-101\", profesor=prof1)\nmat2 = Materia(nombre_materia=\"Programación con Python\", codigo_materia=\"PY-101\", profesor=prof2)\nsession.add_all([prof1, prof2, est1, est2, est3, mat1, mat2])\nsession.commit() # Commit para que los IDs se generen\n# Inscripciones\n# Carlos y Diana en Bases de Datos\ninsc1 = Inscripcion(estudiante=est1, materia=mat1)",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "est3",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "est3 = Estudiante(nombre=\"Elena\", apellido=\"Mora\", codigo_estudiante=\"E2023003\")\n# Materias\nmat1 = Materia(nombre_materia=\"Bases de Datos Avanzadas\", codigo_materia=\"BDA-101\", profesor=prof1)\nmat2 = Materia(nombre_materia=\"Programación con Python\", codigo_materia=\"PY-101\", profesor=prof2)\nsession.add_all([prof1, prof2, est1, est2, est3, mat1, mat2])\nsession.commit() # Commit para que los IDs se generen\n# Inscripciones\n# Carlos y Diana en Bases de Datos\ninsc1 = Inscripcion(estudiante=est1, materia=mat1)\ninsc2 = Inscripcion(estudiante=est2, materia=mat1)",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "mat1",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "mat1 = Materia(nombre_materia=\"Bases de Datos Avanzadas\", codigo_materia=\"BDA-101\", profesor=prof1)\nmat2 = Materia(nombre_materia=\"Programación con Python\", codigo_materia=\"PY-101\", profesor=prof2)\nsession.add_all([prof1, prof2, est1, est2, est3, mat1, mat2])\nsession.commit() # Commit para que los IDs se generen\n# Inscripciones\n# Carlos y Diana en Bases de Datos\ninsc1 = Inscripcion(estudiante=est1, materia=mat1)\ninsc2 = Inscripcion(estudiante=est2, materia=mat1)\n# Diana y Elena en Python\ninsc3 = Inscripcion(estudiante=est2, materia=mat2)",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "mat2",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "mat2 = Materia(nombre_materia=\"Programación con Python\", codigo_materia=\"PY-101\", profesor=prof2)\nsession.add_all([prof1, prof2, est1, est2, est3, mat1, mat2])\nsession.commit() # Commit para que los IDs se generen\n# Inscripciones\n# Carlos y Diana en Bases de Datos\ninsc1 = Inscripcion(estudiante=est1, materia=mat1)\ninsc2 = Inscripcion(estudiante=est2, materia=mat1)\n# Diana y Elena en Python\ninsc3 = Inscripcion(estudiante=est2, materia=mat2)\ninsc4 = Inscripcion(estudiante=est3, materia=mat2)",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "insc1",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "insc1 = Inscripcion(estudiante=est1, materia=mat1)\ninsc2 = Inscripcion(estudiante=est2, materia=mat1)\n# Diana y Elena en Python\ninsc3 = Inscripcion(estudiante=est2, materia=mat2)\ninsc4 = Inscripcion(estudiante=est3, materia=mat2)\nsession.add_all([insc1, insc2, insc3, insc4])\nsession.commit()\nprint(\"Datos de prueba insertados correctamente.\")\nsession.close()",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "insc2",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "insc2 = Inscripcion(estudiante=est2, materia=mat1)\n# Diana y Elena en Python\ninsc3 = Inscripcion(estudiante=est2, materia=mat2)\ninsc4 = Inscripcion(estudiante=est3, materia=mat2)\nsession.add_all([insc1, insc2, insc3, insc4])\nsession.commit()\nprint(\"Datos de prueba insertados correctamente.\")\nsession.close()",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "insc3",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "insc3 = Inscripcion(estudiante=est2, materia=mat2)\ninsc4 = Inscripcion(estudiante=est3, materia=mat2)\nsession.add_all([insc1, insc2, insc3, insc4])\nsession.commit()\nprint(\"Datos de prueba insertados correctamente.\")\nsession.close()",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "insc4",
+        "kind": 5,
+        "importPath": "database_setup",
+        "description": "database_setup",
+        "peekOfCode": "insc4 = Inscripcion(estudiante=est3, materia=mat2)\nsession.add_all([insc1, insc2, insc3, insc4])\nsession.commit()\nprint(\"Datos de prueba insertados correctamente.\")\nsession.close()",
+        "detail": "database_setup",
+        "documentation": {}
+    },
+    {
+        "label": "Profesor",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Profesor(Base):\n    __tablename__ = 'profesores'\n    id = Column(Integer, primary_key=True)\n    nombre = Column(String(50), nullable=False)\n    apellido = Column(String(50), nullable=False)\n    especialidad = Column(String(100))\n    is_active = Column(Boolean, default=True, nullable=False)\nclass Estudiante(Base):\n    __tablename__ = 'estudiantes'\n    id = Column(Integer, primary_key=True)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Estudiante",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Estudiante(Base):\n    __tablename__ = 'estudiantes'\n    id = Column(Integer, primary_key=True)\n    nombre = Column(String(50), nullable=False)\n    apellido = Column(String(50), nullable=False)\n    codigo_estudiante = Column(String(20), unique=True, nullable=False)\n    is_active = Column(Boolean, default=True, nullable=False)\nclass Materia(Base):\n    __tablename__ = 'materias'\n    id = Column(Integer, primary_key=True)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Materia",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Materia(Base):\n    __tablename__ = 'materias'\n    id = Column(Integer, primary_key=True)\n    nombre_materia = Column(String(100), nullable=False)\n    codigo_materia = Column(String(20), unique=True, nullable=False)\n    profesor_id = Column(Integer, ForeignKey('profesores.id'))\n    profesor = relationship(\"Profesor\")\n    inscripciones = relationship(\"Inscripcion\", back_populates=\"materia\", cascade=\"all, delete-orphan\")\nclass Inscripcion(Base):\n    __tablename__ = 'inscripciones'",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Inscripcion",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Inscripcion(Base):\n    __tablename__ = 'inscripciones'\n    id = Column(Integer, primary_key=True)\n    estudiante_id = Column(Integer, ForeignKey('estudiantes.id'))\n    materia_id = Column(Integer, ForeignKey('materias.id'))\n    fecha_inscripcion = Column(Date, default=datetime.date.today)\n    estudiante = relationship(\"Estudiante\")\n    materia = relationship(\"Materia\")\n    asistencias = relationship(\"Asistencia\", back_populates=\"inscripcion\", cascade=\"all, delete-orphan\")\nclass Asistencia(Base):",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Asistencia",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class Asistencia(Base):\n    __tablename__ = 'asistencias'\n    id = Column(Integer, primary_key=True)\n    inscripcion_id = Column(Integer, ForeignKey('inscripciones.id'))\n    fecha = Column(Date, nullable=False)\n    presente = Column(Boolean, default=False, nullable=False)\n    inscripcion = relationship(\"Inscripcion\", back_populates=\"asistencias\")\n# Configuración de la base de datos\nengine = create_engine('sqlite:///asistencia.db')\nBase.metadata.bind = engine",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "Base = declarative_base()\nclass Profesor(Base):\n    __tablename__ = 'profesores'\n    id = Column(Integer, primary_key=True)\n    nombre = Column(String(50), nullable=False)\n    apellido = Column(String(50), nullable=False)\n    especialidad = Column(String(100))\n    is_active = Column(Boolean, default=True, nullable=False)\nclass Estudiante(Base):\n    __tablename__ = 'estudiantes'",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "engine = create_engine('sqlite:///asistencia.db')\nBase.metadata.bind = engine\nDBSession = sessionmaker(bind=engine)\nsession = DBSession()",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Base.metadata.bind",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "Base.metadata.bind = engine\nDBSession = sessionmaker(bind=engine)\nsession = DBSession()",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "DBSession",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "DBSession = sessionmaker(bind=engine)\nsession = DBSession()",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "session = DBSession()",
+        "detail": "models",
+        "documentation": {}
+    }
+]
