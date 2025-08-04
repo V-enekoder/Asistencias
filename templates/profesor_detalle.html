@@ -1,0 +1,72 @@
+{% extends "base.html" %} {% block title %}Detalles de {{ profesor.nombre }} {{
+profesor.apellido }}{% endblock %} {% block content %}
+<h2>Detalles del Profesor</h2>
+
+<!-- Tarjeta de Información del Profesor -->
+<div class="card">
+	<div
+		style="
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		"
+	>
+		<!-- Columna Izquierda: Datos del Profesor -->
+		<div>
+			<h3 style="margin-top: 0">
+				{{ profesor.nombre }} {{ profesor.apellido }}
+			</h3>
+			<p><strong>ID:</strong> {{ profesor.id }}</p>
+			<p>
+				<strong>Especialidad:</strong> {{ profesor.especialidad or 'No
+				especificada' }}
+			</p>
+		</div>
+
+		<!-- Columna Derecha: Botones de Acción -->
+		<div style="margin-left: auto; white-space: nowrap">
+			<a
+				href="{{ url_for('lista_profesores') }}"
+				class="btn"
+				style="background-color: #6c757d"
+				>← Volver a la lista</a
+			>
+			<a
+				href="{{ url_for('editar_profesor', profesor_id=profesor.id) }}"
+				class="btn"
+				style="background-color: #6582a9; color: #333"
+				>Editar Profesor</a
+			>
+		</div>
+	</div>
+</div>
+
+<!-- Tarjeta de Materias Asignadas -->
+<div class="card">
+	<!-- Contenedor interno para asegurar el apilamiento vertical -->
+	<div>
+		<h4>Materias que Imparte Actualmente</h4>
+		{% if profesor.materias %}
+		<table>
+			<thead>
+				<tr>
+					<th>Código de Materia</th>
+					<th>Nombre de la Materia</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for materia in profesor.materias %}
+				<tr>
+					<td>{{ materia.codigo_materia }}</td>
+					<td>{{ materia.nombre_materia }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% else %}
+		<p>Este profesor no tiene materias asignadas actualmente.</p>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

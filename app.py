@@ -200,6 +200,21 @@ def eliminar_profesor(profesor_id):
             
     return redirect(url_for('lista_profesores'))
 
+@app.route('/profesores/detalle/<int:profesor_id>')
+def detalle_profesor(profesor_id):
+    """Muestra los detalles de un profesor y las materias que imparte."""
+    
+    # Usamos joinedload para cargar eficientemente las materias
+    # en la misma consulta para evitar el problema N+1.
+    profesor = session.query(Profesor).options(
+        joinedload(Profesor.materias)
+    ).get(profesor_id)
+    
+    if not profesor:
+        flash(f'Profesor con ID {profesor_id} no encontrado.', 'danger')
+        return redirect(url_for('lista_profesores'))
+        
+    return render_template('profesor_detalle.html', profesor=profesor)
 # --- CRUD DE MATERIAS ---
 
 @app.route('/materias/gestion')

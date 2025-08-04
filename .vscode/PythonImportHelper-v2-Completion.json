@@ -381,6 +381,15 @@
         "documentation": {}
     },
     {
+        "label": "detalle_profesor",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def detalle_profesor(profesor_id):\n    \"\"\"Muestra los detalles de un profesor y las materias que imparte.\"\"\"\n    # Usamos joinedload para cargar eficientemente las materias\n    # en la misma consulta para evitar el problema N+1.\n    profesor = session.query(Profesor).options(\n        joinedload(Profesor.materias)\n    ).get(profesor_id)\n    if not profesor:\n        flash(f'Profesor con ID {profesor_id} no encontrado.', 'danger')\n        return redirect(url_for('lista_profesores'))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
         "label": "lista_materias",
         "kind": 2,
         "importPath": "app",
@@ -619,7 +628,7 @@
         "kind": 6,
         "importPath": "models",
         "description": "models",
-        "peekOfCode": "class Profesor(Base):\n    __tablename__ = 'profesores'\n    id = Column(Integer, primary_key=True)\n    nombre = Column(String(50), nullable=False)\n    apellido = Column(String(50), nullable=False)\n    especialidad = Column(String(100))\n    is_active = Column(Boolean, default=True, nullable=False)\nclass Estudiante(Base):\n    __tablename__ = 'estudiantes'\n    id = Column(Integer, primary_key=True)",
+        "peekOfCode": "class Profesor(Base):\n    __tablename__ = 'profesores'\n    id = Column(Integer, primary_key=True)\n    nombre = Column(String(50), nullable=False)\n    apellido = Column(String(50), nullable=False)\n    especialidad = Column(String(100))\n    is_active = Column(Boolean, default=True, nullable=False)\n    materias = relationship(\"Materia\", back_populates=\"profesor\")\nclass Estudiante(Base):\n    __tablename__ = 'estudiantes'",
         "detail": "models",
         "documentation": {}
     },
@@ -637,7 +646,7 @@
         "kind": 6,
         "importPath": "models",
         "description": "models",
-        "peekOfCode": "class Materia(Base):\n    __tablename__ = 'materias'\n    id = Column(Integer, primary_key=True)\n    nombre_materia = Column(String(100), nullable=False)\n    codigo_materia = Column(String(20), unique=True, nullable=False)\n    profesor_id = Column(Integer, ForeignKey('profesores.id'))\n    profesor = relationship(\"Profesor\")\n    inscripciones = relationship(\"Inscripcion\", back_populates=\"materia\", cascade=\"all, delete-orphan\")\nclass Inscripcion(Base):\n    __tablename__ = 'inscripciones'",
+        "peekOfCode": "class Materia(Base):\n    __tablename__ = 'materias'\n    id = Column(Integer, primary_key=True)\n    nombre_materia = Column(String(100), nullable=False)\n    codigo_materia = Column(String(20), unique=True, nullable=False)\n    profesor_id = Column(Integer, ForeignKey('profesores.id'))\n    profesor = relationship(\"Profesor\", back_populates=\"materias\")\n    inscripciones = relationship(\"Inscripcion\", back_populates=\"materia\", cascade=\"all, delete-orphan\")\nclass Inscripcion(Base):\n    __tablename__ = 'inscripciones'",
         "detail": "models",
         "documentation": {}
     },
@@ -664,7 +673,7 @@
         "kind": 5,
         "importPath": "models",
         "description": "models",
-        "peekOfCode": "Base = declarative_base()\nclass Profesor(Base):\n    __tablename__ = 'profesores'\n    id = Column(Integer, primary_key=True)\n    nombre = Column(String(50), nullable=False)\n    apellido = Column(String(50), nullable=False)\n    especialidad = Column(String(100))\n    is_active = Column(Boolean, default=True, nullable=False)\nclass Estudiante(Base):\n    __tablename__ = 'estudiantes'",
+        "peekOfCode": "Base = declarative_base()\nclass Profesor(Base):\n    __tablename__ = 'profesores'\n    id = Column(Integer, primary_key=True)\n    nombre = Column(String(50), nullable=False)\n    apellido = Column(String(50), nullable=False)\n    especialidad = Column(String(100))\n    is_active = Column(Boolean, default=True, nullable=False)\n    materias = relationship(\"Materia\", back_populates=\"profesor\")\nclass Estudiante(Base):",
         "detail": "models",
         "documentation": {}
     },

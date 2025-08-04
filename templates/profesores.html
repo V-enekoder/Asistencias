@@ -1,30 +1,43 @@
 {% extends "base.html" %} {% block title %}Gestión de Profesores{% endblock %}
 {% block content %}
 <div class="header">
-    <h1>Gestión de Profesores</h1>
-    <a href="{{ url_for('nuevo_profesor') }}" class="btn create-btn">Registrar Profesor</a>
+	<h1>Gestión de Profesores</h1>
+	<a href="{{ url_for('nuevo_profesor') }}" class="btn create-btn"
+		>Registrar Profesor</a
+	>
 </div>
 
 {% with messages = get_flashed_messages(with_categories=true) %} {% if messages
 %} {% for category, message in messages %}
 <div class="alert alert-{{ category }}">{{ message }}</div>
-{% endfor %} {% endif %} {% endwith %}
-
-{% for profesor in profesores %}
+{% endfor %} {% endif %} {% endwith %} {% for profesor in profesores %}
 <div class="card">
 	<div>
 		<h2>{{ profesor.nombre }} {{ profesor.apellido }}</h2>
 		<p>Especialidad: {{ profesor.especialidad }}</p>
 	</div>
-    <div class="action-buttons">
-        <a href="{{ url_for('editar_profesor', profesor_id=profesor.id) }}" class="btn btn-card">Editar</a>
-        <a href="#" class="btn btn-card">Ver materias dictadas</a>
-        <form action="{{ url_for('eliminar_profesor', profesor_id=profesor.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar este profesor?');">
-            <button type="submit" class="btn btn-delete">Eliminar</button>
-        </form>
-    </div>
+	<div class="action-buttons">
+		<a
+			href="{{ url_for('editar_profesor', profesor_id=profesor.id) }}"
+			class="btn btn-card"
+			>Editar</a
+		>
+
+		<a
+			href="{{ url_for('detalle_profesor',profesor_id=profesor.id)}}"
+			class="btn btn-card"
+			>Ver materias dictadas</a
+		>
+		<form
+			action="{{ url_for('eliminar_profesor', profesor_id=profesor.id) }}"
+			method="POST"
+			style="display: inline"
+			onsubmit="return confirm('¿Seguro que deseas eliminar este profesor?');"
+		>
+			<button type="submit" class="btn btn-delete">Eliminar</button>
+		</form>
+	</div>
 </div>
 {% else %}
-	<p>No hay profesores registrados.</p>
-{% endfor %}
-{% endblock %}
+<p>No hay profesores registrados.</p>
+{% endfor %} {% endblock %}

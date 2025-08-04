@@ -12,6 +12,8 @@ class Profesor(Base):
     apellido = Column(String(50), nullable=False)
     especialidad = Column(String(100))
     is_active = Column(Boolean, default=True, nullable=False)
+    
+    materias = relationship("Materia", back_populates="profesor")
 
 class Estudiante(Base):
     __tablename__ = 'estudiantes'
@@ -27,7 +29,7 @@ class Materia(Base):
     nombre_materia = Column(String(100), nullable=False)
     codigo_materia = Column(String(20), unique=True, nullable=False)
     profesor_id = Column(Integer, ForeignKey('profesores.id'))
-    profesor = relationship("Profesor")
+    profesor = relationship("Profesor", back_populates="materias")
     inscripciones = relationship("Inscripcion", back_populates="materia", cascade="all, delete-orphan")
 
 class Inscripcion(Base):
